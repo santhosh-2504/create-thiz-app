@@ -2,10 +2,25 @@
   "name": "create-this-app",
   "version": "1.0.0",
   "description": "CLI tool to generate a modern MEN stack backend with file-based routing, hot reload, and clean developer experience.",
+  "main": "index.js",
   "bin": {
-    "create-this-app": "./index.js"
+    "create-this-app": "index.js"
   },
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santhosh-2504/create-this-app.git"
+  },
+  "author": "Santhosh Kumar Anantha <santhoshanantha58@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santhosh-2504/create-this-app/issues"
+  },
+  "homepage": "https://github.com/santhosh-2504/create-this-app#readme",
+  "files": [
+    "index.js",
+    "templates/"
+  ],
   "keywords": [
     "this",
     "thisjs",
