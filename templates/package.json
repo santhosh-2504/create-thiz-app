@@ -1,0 +1,32 @@
+{
+  "name": "men-stack-template",
+  "version": "1.0.0",
+  "description": "A clean and minimal starter template for MongoDB, Express, and Node.js (MEN Stack).",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "nodejs",
+    "men-stack",
+    "backend-template",
+    "starter-template"
+  ],
+  "author": "Santhosh Kumar Anantha",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
