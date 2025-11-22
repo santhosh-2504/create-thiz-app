@@ -15,10 +15,10 @@ const __dirname = path.dirname(__filename);
 
 // Premium Banner
 console.log(chalk.cyanBright(`
-┌──────────────────────────────────────────────┐
-│                create-thiz-app                │
-│    A clean and modern MEN stack bootstrap     │
-└──────────────────────────────────────────────┘
+┌────────────────────────────────────────────────┐
+│                    create-thiz-app             │
+│      Backend development. Clean. Fast. THIZ.   │
+└────────────────────────────────────────────────┘
 `));
 
 // Read project name
@@ -76,13 +76,13 @@ const endTime = Date.now();
 const totalSeconds = ((endTime - startTime) / 1000).toFixed(2);
 
 // Final Message
-console.log(chalk.greenBright("\n✔ Your THIS backend project is ready!\n"));
+console.log(chalk.greenBright("\n✔ THIZ is ready !\n"));
 console.log(
   chalk.cyanBright(`Next steps:
   cd ${projectName}
   npm run dev
 
-You're all set to make THIS happen!`)
+Your logic. Your flow. THIZ handles the rest.`)
 );
 
 // Show execution time
