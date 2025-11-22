@@ -1,5 +1,5 @@
-# Bootstrapped with `create-thiz-app`
-A clean MEN (MongoDB, Express, Node.js) starter bootstrapped using the `create-thiz-app` CLI.
+# Created with `create-thiz-app`
+An opinionated MEN stack generator featuring file-based routing, zero-config setup, and a fast dev server.
 
 # MEN Stack Starter Template
 
@@ -7,14 +7,15 @@ A clean, minimal starter template for building backends with MongoDB, Express, a
 
 ## Features
 
+- **File-based routing** powered by **@thizjs/core** — no manual route configuration needed
 - Express server with a neat folder structure
 - MongoDB connection using Mongoose
 - Graceful handling when `MONGO_URI` is missing (server won't explode)
 - Automatic port fallback (5000 → 5001 → 5002…)
 - CORS enabled by default
 - Request logging with Morgan
-- Nodemon for development with auto-restart
-- Example route, controller, and model to get you moving
+- **Hot reload** during development powered by **@thizjs/dev**
+- Example route handler and model to get you moving
 - `.env` auto-loaded with sensible defaults
 
 ## Folder Structure
@@ -23,7 +24,6 @@ project/
 ├── .env
 ├── .env.example
 ├── .gitignore
-├── nodemon.json
 ├── package.json
 └── src/
     ├── app.js
@@ -31,12 +31,11 @@ project/
     ├── database/
     │   └── connection.js
     ├── models/
-    │   └── sample.model.js
-    ├── controllers/
-    │   └── sample.controller.js
+    │   └── sampleProduct.js
     └── routes/
-        └── sample.routes.js
-```
+        └── test
+              └── GET.js
+```     └── GET.js
 
 Clean, simple, and just enough structure to prevent chaos.
 
@@ -65,7 +64,12 @@ Now update:
 npm run dev
 ```
 
-Nodemon will watch your files (including `.env`) and restart automatically. Yes, it really watches `.env` too — because forgetting to restart the server after editing it is a phase we'd all like to skip.
+**@thizjs/dev** provides hot reload by watching your source files during development.
+(Changes to `.env` currently require a manual restart.)
+
+## File-Based Routing
+
+Routes are automatically registered using **@thizjs/core**. Just create your route files in the `src/routes/` directory and they'll be picked up automatically — no manual configuration needed.
 
 ## Example Route
 

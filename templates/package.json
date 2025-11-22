@@ -1,25 +1,26 @@
 {
-  "name": "men-stack-template",
+  "name": "my-thiz-app",
   "version": "1.0.0",
-  "description": "A clean and minimal starter template for MongoDB, Express, and Node.js (MEN Stack).",
+  "description": "A clean and minimal MEN stack starter powered by THIZ — file-based routing, zero-config setup, and a fast dev server.",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "this-dev"
   },
   "keywords": [
+    "men-stack",
     "mongodb",
     "express",
     "nodejs",
-    "men-stack",
-    "backend-template",
+    "backend",
+    "thiz",
     "starter-template"
   ],
-  "author": "Santhosh Kumar Anantha",
+  "author": "",
   "license": "MIT",
   "dependencies": {
+    "@thizjs/core": "^0.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -27,6 +28,6 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "@thizjs/dev": "^0.0.2"
   }
 }

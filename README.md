@@ -1,6 +1,6 @@
 # create-thiz-app
 
-A lightweight CLI tool to instantly bootstrap a clean MEN stack backend (MongoDB, Express, Node.js). Zero setup, zero stress — one command and your backend is ready to run.
+An opinionated MEN stack generator that gives you file-based routing and a zero-config developer experience. Build production-ready backends in seconds.
 
 ## Why?
 
@@ -34,14 +34,15 @@ You can start coding immediately.
 ## Template Features
 
 The included MEN starter provides:
+* **File-based routing** powered by **@thizjs/core** — no manual route configuration needed
 * Express server with a clean folder structure
 * MongoDB connection via Mongoose
 * Graceful handling when `MONGO_URI` is missing
 * Automatic port fallback (5000 → 5001 → 5002…)
 * CORS configured
 * HTTP request logging with Morgan
-* Nodemon for development
-* Example model, controller, and route
+* **Hot reload** during development powered by **@thizjs/dev**
+* Example model and route handlers
 * `.env` preloaded with defaults
 
 A simple template that avoids chaos and gets out of your way.
@@ -54,9 +55,9 @@ npm run dev
 ```
 
 You'll immediately see:
-* The server running
+* The server running with hot reload
 * Helpful logs
-* Sample API route working at `/api/sample`
+* File-based routes automatically registered
 
 ## Folder Structure (CLI Project)
 
@@ -68,14 +69,13 @@ create-thiz-app/
 └── templates/      # MEN starter template copied to new projects
     ├── README.md
     ├── .env.example
-    ├── nodemon.json
     ├── package.json
     └── src/
 ```
 
 ## Contributing
 
-Issues and pull requests are welcome. If you have ideas for v2 — TypeScript, prompts, variants, or generators — feel free to open a discussion.
+Issues and pull requests are welcome. If you have ideas for improvements — TypeScript support, prompts, variants, or additional generators — feel free to open a discussion.
 
 ## Author
 
