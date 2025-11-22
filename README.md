@@ -1,4 +1,4 @@
-# create-this-app
+# create-thiz-app
 
 A lightweight CLI tool to instantly bootstrap a clean MEN stack backend (MongoDB, Express, Node.js). Zero setup, zero stress — one command and your backend is ready to run.
 
@@ -10,13 +10,13 @@ Because rewriting the same boilerplate for every new backend project gets old af
 
 Use it directly with NPX:
 ```bash
-npx create-this-app my-backend
+npx create-thiz-app my-backend
 ```
 
 Or install globally:
 ```bash
-npm install -g create-this-app
-create-this-app my-backend
+npm install -g create-thiz-app
+create-thiz-app my-backend
 ```
 
 ## What You Get
@@ -48,7 +48,7 @@ A simple template that avoids chaos and gets out of your way.
 
 ## Usage Example
 ```bash
-npx create-this-app api-server
+npx create-thiz-app api-server
 cd api-server
 npm run dev
 ```
@@ -62,7 +62,7 @@ You'll immediately see:
 
 If you're exploring or contributing, the CLI repository looks like:
 ```
-create-this-app/
+create-thiz-app/
 ├── index.js        # CLI logic
 ├── package.json    # CLI metadata
 └── templates/      # MEN starter template copied to new projects

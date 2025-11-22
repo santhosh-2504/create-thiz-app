@@ -1,5 +1,5 @@
-# Bootstrapped with `create-this-app`
-A clean MEN (MongoDB, Express, Node.js) starter bootstrapped using the `create-this-app` CLI.
+# Bootstrapped with `create-thiz-app`
+A clean MEN (MongoDB, Express, Node.js) starter bootstrapped using the `create-thiz-app` CLI.
 
 # MEN Stack Starter Template
 
@@ -44,7 +44,7 @@ Clean, simple, and just enough structure to prevent chaos.
 
 ### 1. Install dependencies
 
-If you used **create-this-app**, dependencies are already installed. If not:
+If you used **create-thiz-app**, dependencies are already installed. If not:
 ```bash
 npm install
 ```

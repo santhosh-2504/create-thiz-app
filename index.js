@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 // Premium Banner
 console.log(chalk.cyanBright(`
 ┌──────────────────────────────────────────────┐
-│                create-this-app                │
+│                create-thiz-app                │
 │    A clean and modern MEN stack bootstrap     │
 └──────────────────────────────────────────────┘
 `));
@@ -25,7 +25,7 @@ console.log(chalk.cyanBright(`
 const projectName = process.argv[2];
 if (!projectName) {
   console.log(chalk.red("✖ No project name provided."));
-  console.log(chalk.yellow("Usage: create-this-app <project-name>"));
+  console.log(chalk.yellow("Usage: create-thiz-app <project-name>"));
   process.exit(1);
 }
 
