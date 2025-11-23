@@ -1,6 +1,6 @@
 {
   "name": "create-thiz-app",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "CLI tool to generate a modern MEN stack backend with file-based routing, hot reload, and clean developer experience.",
   "main": "index.js",
   "bin": {

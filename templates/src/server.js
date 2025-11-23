@@ -2,11 +2,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import app from "./app.js";
-import connectDB from "./database/connection.js";
+import connectMongoDB from "./db/mongo.js";
 
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 5000;
 
-connectDB();
+connectMongoDB();
 
 function startServer(port) {
   const server = app.listen(port, () => {
