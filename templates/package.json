@@ -1,7 +1,7 @@
 {
   "name": "my-thiz-app",
   "version": "1.0.0",
-  "description": "A clean and minimal MEN stack starter powered by THIZ — file-based routing, zero-config setup, and a fast dev server.",
+  "description": "A THIZ.js starter — file-based routing for Express with zero-config setup and hot reload. MongoDB ready.",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
@@ -9,18 +9,23 @@
     "dev": "thiz-dev"
   },
   "keywords": [
-    "men-stack",
-    "mongodb",
+    "thiz",
+    "thizjs",
     "express",
+    "file-based-routing",
+    "middleware",
     "nodejs",
     "backend",
-    "thiz",
+    "api",
+    "rest",
+    "typescript",
+    "mongodb",
     "starter-template"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@thizjs/core": "^0.0.2",
+    "@thizjs/express": "^1.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -28,6 +33,9 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@thizjs/dev": "^0.0.4"
+    "@thizjs/dev": "^0.0.4",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6"
   }
 }
