@@ -50,7 +50,7 @@ await fs.copy(templateDir, targetDir);
 console.log(chalk.green("✔ Project structure created."));
 
 // Step 2: Create .env
-const envExample = path.join(targetDir, ".env.local");
+const envExample = path.join(targetDir, ".env.example");
 const envFile = path.join(targetDir, ".env.local");
 
 if (fs.existsSync(envExample)) {
