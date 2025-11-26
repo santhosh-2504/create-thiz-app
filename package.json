@@ -1,6 +1,6 @@
 {
   "name": "create-thiz-app",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Create Express APIs with file-based routing and convention-based middleware. Zero config, instant hot reload, TypeScript ready.",
   "main": "index.js",
   "bin": {

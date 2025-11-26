@@ -6,7 +6,8 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "thiz-dev"
+    "dev": "thiz-dev",
+    "routes": "thiz-routes"
   },
   "keywords": [
     "thiz",
@@ -25,15 +26,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@thizjs/express": "^1.0.0",
+    "@thizjs/express": "^1.0.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.2.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@thizjs/dev": "^0.0.4",
+    "@thizjs/dev": "^0.0.7",
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.1",
     "tsx": "^4.20.6"

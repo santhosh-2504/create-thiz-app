@@ -6,7 +6,7 @@ A modern CLI for scaffolding Express APIs with **file-based routing** and **zero
 
 Stop copying boilerplate. Stop configuring routers. Start building.
 
-This CLI generates a clean Express starter powered by **THIZ.js** — giving you file-based routing, convention-based middleware, and hot reload out of the box. No webpack, no complex setup, just a backend that works.
+This CLI generates a clean Express starter powered by **THIZ.js** — giving you file-based routing, convention-based middleware, hot reload, and a built-in route inspector out of the box. No webpack, no complex setup, just a backend that works.
 
 ## Quick Start
 
@@ -23,13 +23,15 @@ That's it. Your API is live at `http://localhost:5000` with hot reload enabled.
 
 Running `create-thiz-app` scaffolds a complete Express starter with:
 
-- 📁 **File-based routing** — create routes by adding files, no manual registration
-- 🔌 **Convention-based middleware** — `._global.js` files auto-apply to all routes
-- 🔥 **Hot reload** — instant updates during development via `@thizjs/dev`
-- 📘 **TypeScript ready** — write `.ts` or `.js`, both work seamlessly
-- 🗄️ **MongoDB optional** — included but completely removable if you don't need it
-- ⚡ **Zero config** — sensible defaults, extensible when needed
-- 🎯 **Clean structure** — organized folders, clear patterns
+- **File-based routing** — create routes by adding files, no manual registration
+- **Convention-based middleware** — `._global.js` files auto-apply to all routes
+- **Hot reload** — instant updates during development via `@thizjs/dev`
+- **Smart .env loading** — multi-file environment variable support with hot-reload
+- **Route inspector** — visual web interface to explore your API structure
+- **TypeScript ready** — write `.ts` or `.js`, both work seamlessly
+- **MongoDB optional** — included but completely removable if you don't need it
+- **Zero config** — sensible defaults, extensible when needed
+- **Clean structure** — organized folders, clear patterns
 
 ## Installation Options
 
@@ -46,12 +48,12 @@ create-thiz-app my-project-name
 
 ## What Happens During Setup
 
-1. ✅ Creates project directory
-2. ✅ Copies the THIZ.js Express template
-3. ✅ Updates `package.json` with your project name
-4. ✅ Generates `.env` from `.env.example`
-5. ✅ Installs all dependencies automatically
-6. ✅ Shows you exactly what to do next
+1. Creates project directory
+2. Copies the THIZ.js Express template
+3. Updates `package.json` with your project name
+4. Generates `.env` from `.env.example`
+5. Installs all dependencies automatically
+6. Shows you exactly what to do next
 
 **You get a working API immediately — no additional setup required.**
 
@@ -65,7 +67,9 @@ The generated project includes:
 - **CORS** and **Morgan** preconfigured
 - **Mongoose** for MongoDB (optional)
 - **Hot reload** development server
+- **Route inspector** for API visualization
 - **TypeScript support** ready to use
+- **Environment variable management** with hot-reload
 
 ### Project Structure
 ```
@@ -116,12 +120,66 @@ export default (req, res, next) => {
 
 The `._global.js` suffix makes it run on every request automatically.
 
+## Route Inspector
+
+Every project includes a built-in route inspector:
+```bash
+npm run routes
+```
+
+This launches a clean web interface at `http://localhost:3456` showing:
+
+- **Route statistics** — total routes, HTTP methods breakdown
+- **Middleware overview** — global and named middlewares
+- **Route table** — complete list of endpoints with their middlewares and source files
+
+Perfect for:
+- Documenting your API structure
+- Debugging routing issues
+- Onboarding new team members
+- Understanding middleware application
+
+## Environment Variables
+
+THIZ.js automatically loads environment variables from multiple `.env` files with smart priority and hot-reload support:
+
+### Supported Files
+1. `.env.local` — Highest priority, for local overrides (gitignored)
+2. `.env.development` — Development-specific variables
+3. `.env` — Base environment variables (can be committed)
+
+### Hot-Reload
+Edit `.env` files while developing and your server automatically restarts with the new values. No manual restart needed.
+
+### Example Setup
+
+**`.env`** (committed to git):
+```bash
+PORT=5000
+NODE_ENV=development
+LOG_LEVEL=info
+```
+
+**`.env.local`** (gitignored, for your local machine):
+```bash
+# Override port for local development
+PORT=3000
+
+# Local database
+MONGO_URI=mongodb://localhost:27017/myapp_local
+
+# Personal API keys
+OPENAI_API_KEY=sk-...
+STRIPE_SECRET_KEY=sk_test_...
+```
+
 ## Commands
 
 Once your project is created:
 ```bash
-npm run dev    # Start with hot reload
-npm start      # Production mode
+npm run dev     # Start with hot reload
+npm start       # Production mode
+npm run routes  # Launch route inspector
 ```
 
 ## MongoDB Usage
@@ -181,9 +239,9 @@ npm start
 
 ## Learn More
 
-- 📦 **NPM:** [create-thiz-app](https://www.npmjs.com/package/create-thiz-app)
-- 📚 **THIZ.js Express:** [Documentation](https://github.com/santhosh-2504/thizjs-express)
-- 🐛 **Issues:** [Report bugs or request features](https://github.com/santhosh-2504/create-thiz-app/issues)
+- **NPM:** [create-thiz-app](https://www.npmjs.com/package/create-thiz-app)
+- **THIZ.js Express:** [Documentation](https://github.com/santhosh-2504/thizjs-express)
+- **Issues:** [Report bugs or request features](https://github.com/santhosh-2504/create-thiz-app/issues)
 
 ## Contributing
 
